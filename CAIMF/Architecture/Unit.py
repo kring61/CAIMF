@@ -48,7 +48,7 @@ class AI_Unit(Unit):
         #     print("You need to set the OPEN_AI_SECRET_KEY environment variable in .env to your OpenAI API key.")
         #     exit(1)
         ready_prompt = self.prompt_builder.createPrompt(self.promptName, inputs)
-        openai.api_key = "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"
+        openai.api_key = "***"
         self.config.add_to_config("prompt", ready_prompt)
         response = openai.Completion.create(
             engine=self.config.engine,
